@@ -44,4 +44,4 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          raw_pdb.zip.zip
+          raw_pdb.zip
