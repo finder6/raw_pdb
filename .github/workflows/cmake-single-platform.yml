@@ -32,7 +32,7 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
       
     - name: Zip the Build
-      run: zip -r raw_pdb.zip ${{github.workspace}}/build
+      run: tar -czf raw_pdb.tgz ${{github.workspace}}/build
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
@@ -44,4 +44,4 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          raw_pdb.zip
+          raw_pdb.tgz
